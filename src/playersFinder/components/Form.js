@@ -43,7 +43,7 @@ export default class Form extends React.Component {
           title="Name"
         />
         <select
-          className="w100 w-25-l pa3 mb2 mb0-l mr3-l"
+          className="w-100 w-25-l pa3 mb2 mb0-l mr3-l"
           title="Position"
           name="position"
           value={this.state.position}
