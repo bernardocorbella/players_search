@@ -9,7 +9,7 @@ const Row = ({ row }) => (
     <td className="pa3 bb">{row.position}</td>
     <td className="pa3 bb">{row.nationality}</td>
     <td className="pa3 bb">
-      <FormatAge />
+      <FormatAge date={row.dateOfBirth} />
     </td>
   </tr>
 );
@@ -19,7 +19,7 @@ Row.propTypes = {
     name: PropTypes.string,
     position: PropTypes.string,
     nationality: PropTypes.string,
-    age: PropTypes.number
+    dateOfBirth: PropTypes.string
   })
 };
 
