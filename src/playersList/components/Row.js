@@ -1,14 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import ageFromDate from '../../utils/ageFromDate';
+import { FormatAge } from '../../formatAge';
 
 const Row = ({ row }) => (
   <tr className="stripe-dark" data-testid="Row">
     <td className="pa3 bb">{row.name}</td>
     <td className="pa3 bb">{row.position}</td>
     <td className="pa3 bb">{row.nationality}</td>
-    <td className="pa3 bb">{ageFromDate(row.dateOfBirth)}</td>
+    <td className="pa3 bb">
+      <FormatAge />
+    </td>
   </tr>
 );
 

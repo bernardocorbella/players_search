@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import moment from 'moment';
 
+import { FormatAge } from '../../formatAge';
 import Row from './Row';
 
 const oneYearBefore = moment().subtract(1.1, 'years');
@@ -17,6 +18,6 @@ describe('<Row />', () => {
     expect(td.at(0).text()).toEqual('a');
     expect(td.at(1).text()).toEqual('b');
     expect(td.at(2).text()).toEqual('c');
-    expect(td.at(3).text()).toEqual('1');
+    expect(td.at(3).contains(<FormatAge />)).toBe(true);
   });
 });
