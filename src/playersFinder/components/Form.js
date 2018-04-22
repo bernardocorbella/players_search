@@ -41,6 +41,7 @@ export default class Form extends React.Component {
           onChange={this.handleInputChange}
           pattern="[A-Za-z]+"
           title="Name"
+          placeholder="Name"
         />
         <select
           className="w-100 w-25-l pa3 mb2 mb0-l mr3-l"
@@ -49,7 +50,7 @@ export default class Form extends React.Component {
           value={this.state.position}
           onChange={this.handleInputChange}
         >
-          <option value="">All</option>
+          <option value="">Position</option>
           {POSITIONS.map((p, index) => (
             <option key={index} value={p}>
               {p}
@@ -65,6 +66,7 @@ export default class Form extends React.Component {
           name="age"
           value={this.state.age}
           onChange={this.handleInputChange}
+          placeholder="Age"
         />
         <input type="submit" className="w-100 w-25-l pa3 mb2 mb0-l" value="Search" />
       </form>
